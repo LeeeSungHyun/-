@@ -24,13 +24,17 @@
 # 55.556%
 
 
-
 c = int(input())
 
-for i in range(c):
-    a = list[map(int,input().split())]
-    avg = sum(a[1:]/a[0])
-    count =0
-    for j in range(a[1:])
 
+for i in range(c):
+    count = 0
+    a = list(map(int,input().split()))
     
+    avg = sum(a[1:]) / a[0]
+    for j in range(1,len(a)):
+        if a[j] > avg:
+            count += 1
+    
+    good = count/a[0] * 100
+    print('%.3f'%good+'%')
